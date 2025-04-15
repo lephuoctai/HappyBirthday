@@ -79,7 +79,7 @@
         // Remove bubble after animation completes
         setTimeout(() => {
             bubble.remove();
-        }, duration * 10000);
+        }, duration * 1000); 
     }
 
     // Create bubbles at random intervals
@@ -92,7 +92,7 @@
         // Continue creating bubbles at a faster rate
         setInterval(() => {
             createBubble();
-        }, 100);
+        }, 80);
     }
 
     // Start creating bubbles when page is loaded
