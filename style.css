@@ -5,6 +5,10 @@ body {
     height: 100%;
     scrollbar-width: none;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -22,15 +26,23 @@ body {
     margin: -10em auto 0 auto;
 }
 
+/* container */
+.container {
+    scrollbar-width: none;
+    overflow: hidden;   
+    
+}
+.cake_container {
+    /* margin-bottom: -200px; */
+    /* display: flex;
+    justify-content: center; */
+}
 /* ============================================== Candle
       */
 
 .cake {
     background: #ffffff;
     border-radius: 10px;
-    position: absolute;
-    top: 228px;
-    left: 50%;
     margin-left: -2.4px;
     margin-top: -8.33333333px;
     width: 5px;
