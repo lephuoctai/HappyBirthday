@@ -136,7 +136,7 @@ p.name {
     }
 
     .fuego:nth-child(1) {
-        animation: fuego 2s 6.5s infinite;
+        animation: fuego 4s 6.5s infinite;
     }
 
     .cake:nth-child(1) .fuego:nth-of-type(4) {
@@ -144,7 +144,7 @@ p.name {
     }
 
     .fuego:nth-child(2) {
-        animation: fuego 1.5s 6.5s infinite;
+        animation: fuego 2.5s 6.5s infinite;
     }
 
     .cake:nth-child(1) .fuego:nth-of-type(2) {
@@ -152,7 +152,7 @@ p.name {
     }
 
     .fuego:nth-child(3) {
-        animation: fuego 1s 6.5s infinite;
+        animation: fuego 2s 8s infinite;
     }
 
     .cake:nth-child(3) .fuego:nth-of-type(2) {
@@ -191,6 +191,37 @@ p.name {
         box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
         transform: translateY(-20px) scale(0);
     }
+}
+
+@keyframes blowOutEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+
+    90% {
+        background: salmon;
+        transform: scale(5);
+        opacity: 0.9;
+        transform: translateY(20px);
+    }
+
+    100% {
+        background: silver;
+        transform: scale(0.5);
+        opacity: 0.1;
+        transform: translateY(-12px);
+    }
+}
+
+.fuego.blow-out {
+    animation: blowOutEffect 0.3s 0.8s forwards;
+    display: block !important;
 }
 
 @keyframes in {
