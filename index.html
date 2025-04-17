@@ -5,14 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css"><style>
-    .bw {
-      filter: grayscale(100%);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <!-- gift.css reference removed -->
 </head>
 
-<body >
+<body>
   <div class="text">
     <h1>Happy birthday!</h1>
     <p class="name">Đăng Hồ</p>
@@ -52,6 +49,7 @@
         c0,19.144,0,57.431,0,76.574c0,10.152,0,40.607,0,40.607c0,1.858-1.506,3.364-3.364,3.364l0,0c-1.858,0-3.364-1.506-3.364-3.364c0,0,0-30.455,0-40.607c0-19.144,0-57.432,0-76.575c0-11.057,0-44.226,0-44.226C96.636-177.015,98.142-178.521,100-178.521
         L100-178.521z
                               ;
+                              M100-178.521c1.858,0,3.364,1.506,3.364,3.363c0,0,0,33.17,0,44.227
                               M100,267.257c1.858,0,3.364,1.506,3.364,3.363c0,0,0,33.17,0,44.227
         c0,19.143,0,57.43,0,76.574c0,10.151,0,40.606,0,40.606c0,1.858-1.506,3.364-3.364,3.364l0,0c-1.858,0-3.364-1.506-3.364-3.364
         c0,0,0-30.455,0-40.606c0-19.145,0-57.432,0-76.576c0-11.057,0-44.225,0-44.225C96.636,268.763,98.142,267.257,100,267.257
@@ -188,6 +186,34 @@
   </div>
 
   <script src="bubbles.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const view = document.querySelector('.view');
+      
+      // Prevent SVG animations from starting immediately
+      const svgAnimations = document.querySelectorAll('svg animate');
+      svgAnimations.forEach(animation => {
+        animation.setAttribute('begin', 'indefinite');
+      });
+      
+      // Add event listener for the final animation's end
+      document.getElementById('crema').addEventListener('endEvent', function() {
+        // Start bubble animation when cake animation finishes
+        if (typeof startBubbles === 'function') {
+          startBubbles();
+        }
+      });
+      
+      // Show cake and start animations immediately
+      setTimeout(function() {
+        view.classList.add('cake-visible');
+        
+        // Start SVG animations
+        document.getElementById('bizcocho_1').beginElement();
+        
+      }, 500);
+    });
+  </script>
 </body>
 
 </html>
