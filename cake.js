@@ -3,6 +3,23 @@ const cakePage = `
   <audio id="myaudio" autoplay="" loop="">
   <source src="./src/audi.mp3" type="audio/mpeg">
   </audio>
+  
+  <div class="frame1">
+    <div class="frame-neon">
+      <img src="./src/1.png" alt="Birthday" />
+    </div>
+  </div>
+  <div class="frame2">
+    <div class="frame-neon">
+      <img src="./src/2.png" alt="Birthday" />
+    </div>
+  </div>
+  <div class="frame3">
+    <div class="frame-neon">
+      <img src="./src/3.png" alt="Birthday" />
+    </div>
+  </div>
+  
   <div class="text">
     <p>Tài tặng Đăng chiếc <br>  bánh kem tài làm nè =))</p>
   </div>
