@@ -378,3 +378,44 @@ canvas {
     transition: all 0.5s ease-in-out;
     transform: translateY(-40px);
 }
+/* img */
+.frame1 {
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    left: 180px;
+    width: 12rem;
+    transform: rotate(5deg);
+}
+.frame2 {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 13rem;
+    transform: rotate(-10deg);
+}
+.frame3 {
+    opacity: 0;
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    width: 20rem;
+    transform: rotate(10deg);
+}
+
+
+
+.frame-neon {
+    display: inline-block;
+    padding: 6px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background: #1e1e2f;
+    box-shadow: 0 0 12px #80fffb, 0 0 24px #f0f0f0;
+  }
+  .frame-neon img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+  
