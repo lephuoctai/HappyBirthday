@@ -1,12 +1,10 @@
-const timeDelay = 600;
 
-document.addEventListener('DOMContentLoaded', () => {
+function run() {
+    const timeDelay = 600;
     const blowCandleButton = document.querySelector('.blowCandle');
-});
-
-console.log(blowCandleButton);
-if (blowCandleButton) {
+    
     blowCandleButton.addEventListener('click', () => {
+        console.log(blowCandleButton);
         turnOffFuego();
         startBubbles();
 
@@ -21,6 +19,4 @@ if (blowCandleButton) {
 
         console.log("shoot confetti");
     });
-} else {
-    console.error("Button with class 'blowCandle' not found.");
 }
