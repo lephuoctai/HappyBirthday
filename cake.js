@@ -194,6 +194,18 @@ const cakePage = `
   
 `;
 
-const cakePageDom = () => { 
-    document.querySelector('body').innerHTML = cakePage; 
+const showCakePage = () => {
+    document.querySelector('body').innerHTML = cakePage;
+}
+
+// Add event listener for letter-heart to load cake page
+const letterHeart = document.querySelector('.letter-heart');
+const envelope = document.querySelector('.envelope');
+
+if (letterHeart) {
+    letterHeart.addEventListener('click', function () {
+        if (envelope.classList.contains('open')) {
+            showCakePage();
+        }
+    });
 }
