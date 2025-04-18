@@ -1,10 +1,22 @@
+const timeDelay = 600;
 
 document.addEventListener('DOMContentLoaded', () => {
-    const blowCandleButton = document.querySelector('.blowCandle');
+    document.body.addEventListener('click', (event) => {
+        if (event.target.classList.contains('blowCandle')) {
+            turnOffFuego();
+            startBubbles();
+            const shoot = setInterval(() => {
+                shootConfetti();
+            }, timeDelay);
 
-    if (blowCandleButton) {
-        blowCandleButton.addEventListener('click', () => {         console.log("checked");turnOffFuego(); startBubbles(); });
-    } else {
-        console.error("Button with class 'blowCandle' not found.");
-    }
+            setTimeout(() => {
+                clearInterval(shoot);
+                shootConfetti(200);
+            }, 3 * timeDelay);
+
+            addText(2);
+            event.target.style.transform = 'translateY(100px)';
+            event.target.style.opacity = '0';
+        }
+    });
 });
