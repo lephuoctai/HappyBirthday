@@ -19,15 +19,6 @@ body {
     background: rgb(255, 176, 208);
 }
 
-p.name {
-    margin: 0;
-
-    color: #8b6a60;
-    font-family: "Corinthia";
-    font-size: 3.5rem;
-    font-weight: 600;
-}
-
 #cake {
     display: block;
     position: relative;
@@ -246,9 +237,39 @@ p.name {
     font-style: italic;
     text-align: center;
     scale: 1.5;
+    transition: all 1s ease-in-out;
 
     h1 {
         font-size: 1.4em;
+    }
+    p {
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+    .name {
+        margin: 0;
+    
+        color: #8b6a60;
+        font-family: "Corinthia";
+        font-size: 3.5rem;
+        font-weight: 600;
+        animation: goIn 2s ease-in-out forwards;
+    }
+    .name2 {
+        margin: 0;
+    
+        color: #8b6a60;
+        font-weight: 600;
+        animation: goIn 2s ease-in-out forwards;
+    }
+}
+@keyframes goIn {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
 
@@ -339,4 +360,21 @@ canvas {
     height: 100%;
     pointer-events: none;
     z-index: -10;
+}
+
+/* blow button */
+.blowCandle {
+    padding: 16px 28px;
+    background-color: #ff8282;
+    border: none;
+    border-radius: 10px;
+    opacity: 0;
+    
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-40px);
 }

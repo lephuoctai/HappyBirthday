@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 shootConfetti(200);
             }, 3 * timeDelay);
 
-            console.log("shoot confetti");
+            addText(2);
+            event.target.style.transform = 'translateY(100px)';
+            event.target.style.opacity = '0';
         }
     });
 });

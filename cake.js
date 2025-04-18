@@ -1,8 +1,10 @@
 const cakePage = `
-    
+
+  <audio id="myaudio" autoplay="" loop="">
+  <source src="./src/audi.mp3" type="audio/mpeg">
+  </audio>
   <div class="text">
-    <h1>Happy birthday!</h1>
-    <p class="name">Đăng Hồ</p>
+    <p>Tài tặng Đăng chiếc <br>  bánh kem tài làm nè =))</p>
   </div>
 
   <div class="view">
@@ -187,15 +189,21 @@ const cakePage = `
       </path>
       <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
     </svg>
-  </div>
 
+  </div>
   <div class="table"></div>
   <button class="blowCandle" style="z-index: 100;">Thổi nến nào!</button>
   
 `;
 
 const showCakePage = () => {
-    document.querySelector('body').innerHTML = cakePage;
+  document.querySelector('body').innerHTML = cakePage;
+  setTimeout(() => {
+    addText(1);
+    setTimeout(() => {
+      document.querySelector('.blowCandle').style.opacity = '1';
+    }, 3000);
+  }, 5000);
 }
 
 // Add event listener for letter-heart to load cake page
@@ -203,9 +211,9 @@ const letterHeart = document.querySelector('.letter-heart');
 const envelope = document.querySelector('.envelope');
 
 if (letterHeart) {
-    letterHeart.addEventListener('click', function () {
-        if (envelope.classList.contains('open')) {
-            showCakePage();
-        }
-    });
+  letterHeart.addEventListener('click', function () {
+    if (envelope.classList.contains('open')) {
+      showCakePage();
+    }
+  });
 }
