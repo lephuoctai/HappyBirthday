@@ -190,7 +190,7 @@ const cakePage = `
   </div>
 
   <div class="table"></div>
-  <button class="blowCandle" style="z-index: 100;" onclick="run()">Thổi nến nào!</button>
+  <button class="blowCandle" style="z-index: 100;">Thổi nến nào!</button>
   
 `;
 
