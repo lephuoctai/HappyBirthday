@@ -1,10 +1,12 @@
 const gift = `<p>
-Giờ hãy hãy nhắm mắt lại và ước đi nào!
+Giờ hãy hãy nhắm mắt lại </br> và ước đi nào!
 </p>`;
 
 const happy = `
+<div class='bgtemp'>
     <h1 class="name2">Happy birthday!</h1>
     <p class="name">Đăng Hồ</p>
+</div>
 `;
 
 function addText(e = 1) {

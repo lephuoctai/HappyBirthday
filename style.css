@@ -188,21 +188,25 @@ body {
         box-shadow: 0 0 30px 10px rgba(248, 233, 209, 0.2);
         transform: translateY(0) scale(1);
     }
+
     30% {
         background: rgba(254, 248, 97, 0.5);
         box-shadow: 0 0 30px 10px rgba(248, 233, 209, 0.2);
         transform: translateY(0) scale(1);
     }
+
     20% {
         background: rgba(255, 50, 0, 0.1);
         box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
         transform: translateY(-20px) scale(0);
     }
+
     80% {
         background: rgba(255, 231, 112, 0.8);
         box-shadow: 0 0 30px 10px rgba(255, 116, 116, 0.2);
         transform: translateY(0) scale(1);
     }
+
     100% {
         background: rgba(255, 195, 55, 0.1);
         box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.4);
@@ -242,32 +246,37 @@ body {
     h1 {
         font-size: 1.4em;
     }
+
     p {
         font-family: sans-serif;
         font-weight: 600;
         font-size: 1.2em;
     }
+
     .name {
         margin: 0;
-    
-        color: #8b6a60;
+
+        color: #ffdd00;
         font-family: "Corinthia";
         font-size: 3.5rem;
         font-weight: 600;
         animation: goIn 2s ease-in-out forwards;
     }
+
     .name2 {
         margin: 0;
-    
-        color: #8b6a60;
+
+        color: #000000;
         font-weight: 600;
         animation: goIn 2s ease-in-out forwards;
     }
 }
+
 @keyframes goIn {
     0% {
         transform: translateY(-50px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -369,7 +378,7 @@ canvas {
     border: none;
     border-radius: 10px;
     opacity: 0;
-    
+
     font-size: 1.2rem;
     color: #ffffff;
     font-weight: 600;
@@ -378,6 +387,7 @@ canvas {
     transition: all 0.5s ease-in-out;
     transform: translateY(-40px);
 }
+
 /* img */
 .frame1 {
     opacity: 0;
@@ -387,6 +397,7 @@ canvas {
     width: 12rem;
     transform: rotate(5deg);
 }
+
 .frame2 {
     opacity: 0;
     position: absolute;
@@ -395,6 +406,7 @@ canvas {
     width: 13rem;
     transform: rotate(-10deg);
 }
+
 .frame3 {
     opacity: 0;
     position: absolute;
@@ -413,9 +425,25 @@ canvas {
     border-radius: 10px;
     background: #1e1e2f;
     box-shadow: 0 0 12px #80fffb, 0 0 24px #f0f0f0;
-  }
-  .frame-neon img {
+}
+
+.frame-neon img {
     max-width: 100%;
     border-radius: 6px;
-  }
-  
+}
+
+.temp {
+    z-index: -10;
+}
+
+/* pseudo temp */
+.bgtemp {
+    padding: 10px;
+    height: 30vh;
+    margin-bottom: -28vh;
+    background: #ffffff80;
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6);
+}
