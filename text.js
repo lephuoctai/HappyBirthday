@@ -1,5 +1,5 @@
 const gift = `<p>
-Giờ hãy hãy nhắm mắt lại </br> và ước đi nào!
+Giờ hãy hãy nhắm mắt lại <br> và ước đi nào!
 </p>`;
 
 const happy = `
