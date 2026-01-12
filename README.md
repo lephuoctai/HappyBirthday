@@ -70,22 +70,7 @@
   |part | -------<#> |whole|
  
   Lobby (1) ------<#> Building <#>------- (1..*)Room
-  Page (1..*) ------<#> Book
- 
-  - Chapter xuất hiện khi Book được tạo
-  - Chapter không thể tồn tại riêng lẻ mà không có Book
- 
-  public Book() {
-      page = new Page();
-  }
- ______
-  Compostion : ~Aggregation "whole/part" nhưng nếu whole bị xóa thì tòan bộ part cũng không còn
- 
-  |Class B| -------<#> |Class A|
- 
-  |part | -------<#> |whole|
- 
-  Lobby (1) ------<#> Building <#>------- (1..*)Room
+  
   Page (1..*) ------<#> Book
  
   - Chapter xuất hiện khi Book được tạo
